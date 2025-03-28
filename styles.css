@@ -61,13 +61,16 @@ h2 {
 
 .certificate-info {
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
     margin-bottom: 20px;
+    font-size: 14px;
 }
 
 .info-row {
     display: flex;
     border-bottom: 1px solid #ddd;
+    min-height: 44px;
+    align-items: center;
 }
 
 .info-row:last-child {
@@ -75,15 +78,20 @@ h2 {
 }
 
 .label {
-    padding: 10px;
-    background: #f9f9f9;
-    width: 40%;  /* 恢复原始宽度 */
-    border-right: 1px solid #ddd;  /* 恢复右边框 */
+    width: 45%;
+    padding: 12px 15px;
+    background: #f8f8f8;
+    border-right: 1px solid #ddd;
+    color: #666;
+    display: flex;
+    align-items: center;
 }
 
 .value {
-    padding: 10px;
-    flex: 1;
+    width: 55%;
+    padding: 12px 15px;
+    color: #333;
+    word-break: break-all;
 }
 
 .action-buttons {
@@ -124,7 +132,11 @@ h2 {
     margin-bottom: 0;
 }
 @media (max-width: 480px) {
-    .button {
-        flex-basis: 100%;  /* 手机端按钮垂直排列 */
+    .certificate-info {
+        font-size: 13px;
+    }
+    
+    .label, .value {
+        padding: 10px 12px;
     }
 }
