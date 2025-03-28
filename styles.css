@@ -12,6 +12,8 @@ body {
     background: white;
     min-height: 100vh;
     padding: 10px;
+    overflow-x: hidden; /* 隐藏横向滚动条 */
+    word-wrap: break-word; 
 }
 
 .header {
@@ -145,5 +147,8 @@ h2 {
     .subtitle {
         font-size: 0.8rem;
         padding: 0 10px;
+    }
+    .container {
+        padding: 0 8px; /* 移动端增加安全边距 */
     }
 }
