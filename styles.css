@@ -17,11 +17,7 @@ body {
 }
 
 .header {
-    background: white;
-    padding: 15px;
-    position: relative;
-    text-align: center;
-    border-bottom: 1px solid #eee;
+    display: none;
 }
 
 .back-button {
