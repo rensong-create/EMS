@@ -7,11 +7,11 @@ body {
 
 .container {
     width: 100%;
-    max-width: 100%; /* 移除固定宽度限制 */
+    max-width: 100%;
     margin: 0 auto;
     background: white;
     min-height: 100vh;
-    padding: 10px; /* 添加内边距 */
+    padding: 10px;
 }
 
 .header {
@@ -66,9 +66,8 @@ h2 {
 }
 
 .info-row {
-    flex-direction: column; /* 手机端垂直排列 */
+    display: flex;
     border-bottom: 1px solid #ddd;
-    padding: 8px 0;
 }
 
 .info-row:last-child {
@@ -76,25 +75,32 @@ h2 {
 }
 
 .label {
-    width: 100%; /* 全宽度显示 */
-    border-right: none;
-    padding: 8px;
+    padding: 10px;
+    background: #f9f9f9;
+    width: 40%;  /* 恢复原始宽度 */
+    border-right: 1px solid #ddd;  /* 恢复右边框 */
 }
 
 .value {
-    flex-direction: column; /* 垂直排列按钮 */
-    gap: 8px;
+    padding: 10px;
+    flex: 1;
 }
 
 .action-buttons {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    /* 添加手机端响应式 */
+    flex-wrap: wrap;
 }
 
 .button {
-    width: 100%; /* 按钮全宽 */
-    box-sizing: border-box;
+    flex: 1;
+    min-width: 150px;  /* 防止按钮过小 */
+    padding: 10px;
+    text-align: center;
+    color: #007AFF;
+    text-decoration: none;
 }
 
 .notices {
@@ -117,15 +123,8 @@ h2 {
 .notices li:last-child {
     margin-bottom: 0;
 }
-@media (min-width: 600px) {
-    /* 桌面端保持原有布局 */
-    .info-row {
-        flex-direction: row;
-    }
-    .label {
-        width: 40%;
-    }
-    .action-buttons {
-        flex-direction: row;
+@media (max-width: 480px) {
+    .button {
+        flex-basis: 100%;  /* 手机端按钮垂直排列 */
     }
 }
