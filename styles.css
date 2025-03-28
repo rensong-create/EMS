@@ -47,7 +47,9 @@ body {
 }
 
 h1 {
-    font-size: 1.4rem;
+    font-size: 18px;
+    text-align: center;  /* 新增居中设置 */
+    margin: 0 0 8px 0;  /* 优化间距 */
 }
 
 h2 {
@@ -56,7 +58,11 @@ h2 {
 }
 
 .subtitle {
-    font-size: 0.9rem;
+    color: #666;
+    text-align: center;  /* 新增居中设置 */
+    margin-bottom: 30px;
+    font-size: 0.9em;    /* 优化字号比例 */
+    letter-spacing: 0.5px; /* 增加字母间距 */
 }
 
 .certificate-info {
@@ -132,11 +138,12 @@ h2 {
     margin-bottom: 0;
 }
 @media (max-width: 480px) {
-    .certificate-info {
-        font-size: 13px;
+    h1 {
+        font-size: 1.3rem;  /* 使用相对单位 */
+        padding: 0 15px;    /* 防止文字换行拥挤 */
     }
-    
-    .label, .value {
-        padding: 10px 12px;
+    .subtitle {
+        font-size: 0.8rem;
+        padding: 0 10px;
     }
 }
